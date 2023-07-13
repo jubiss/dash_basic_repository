@@ -51,7 +51,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-The step 3 to 5 is already encapsulated on the file install.bat
+If you want to do the steps from 3 to 5 and add my personal components, that I use in my projects just use the install.bat
 
 ### Usage
 
