@@ -1,6 +1,6 @@
 @echo off
 
-echo ativacao do venv juliana_comercial
+echo Venv Activation
 call .env\Scripts\activate
-echo Rodando servidor de dash 
+echo Starting Dash server
 python index.py
