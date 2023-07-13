@@ -1,6 +1,6 @@
 # Dash Application Repository Template
 
-![Dash Logo](https://upload.wikimedia.org/wikipedia/commons/3/34/Plotly-logo-01-square.png)
+![Dash Logo](https://upload.wikimedia.org/wikipedia/commons/8/8a/Plotly-logo.png)
 
 This repository serves as a template for creating applications with Dash, a powerful Python framework for building interactive web applications. Whether you're starting a new project or looking to organize an existing Dash application, this template provides a solid foundation to get you up and running quickly.
 
