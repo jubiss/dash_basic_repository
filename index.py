@@ -3,7 +3,7 @@ from dash.dependencies import Input, Output
 
 # Connect to main app.py file
 from app import app
-# from app import server
+from app import server
 # from apps import page1, page2
 
 app.layout = html.Div([
