@@ -1,20 +1,23 @@
+import dash
+import dash_bootstrap_components as dbc
 from dash import html, dcc
 from dash.dependencies import Input, Output
 
-# Connect to main app.py file
-from app import app
-from app import server
-# from apps import page1, page2
-import dash_custom_components.my_components as c1 
+# meta_tags are required for the app layout to be mobile responsive
+app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.BOOTSTRAP],
+                meta_tags=[{'name': 'viewport',
+                            'content': 'width=device-width, initial-scale=1.0'}]
+                )
+server = app.server
 
 link_list = [("01. Main Page", "/"),
              ("02. Data Profiling", "/profiling"),
              ]
 
-navbar, CONTENT_STYLE = c1.navbar(link_list=link_list, color="#3957BD")
+# navbar, CONTENT_STYLE = c1.navbar(link_list=link_list, color="#3957BD")
 
-content = html.Div(id='page-content', style=CONTENT_STYLE)
-app.layout = html.Div([dcc.Location(id="url"), navbar, content])
+# content = html.Div(id='page-content', style=CONTENT_STYLE)
+# app.layout = html.Div([dcc.Location(id="url"), navbar, content])
 
 @app.callback(Output('page-content', 'children'), [Input('url', 'pathname')])
 def display_page(pathname):
